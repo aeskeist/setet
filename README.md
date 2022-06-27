@@ -15,5 +15,7 @@ Upon selecting and confirming a group, the script will begin automatically downl
 Planned features:
 
 "Cycle-back" - Re-prompt for user selection following successful group install.
+
 "Multiple group selection" - Allow user to select multiple groups for batch installation.
+
 "Individual selection" - Allow user to select individual applications from specific groups and create unique "batches" for installation.
