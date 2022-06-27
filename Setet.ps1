@@ -1,63 +1,107 @@
 ﻿#Variable initialization for groups
-$userInput = $null
-$groupSet = $null
-$groupCore = "7zip.7zip,notepad++.notepad++,GPSoftware.DirectoryOpus,CentStudio.CentBrowser,Nvidia.GeForceExperience,Microsoft.Office,Microsoft.VisualStudioCode"
-$groupAV = "VideoLAN.VLC,Spotify.Spotify,OBSProject.OBSStudio"
+$primaryStart = $null
+$secondaryStart = $null
+$primarySelection = $null
+$secondarySelection = $null
+$groupStart = "CentStudio.CentBrowser,Discord.Discord,GPSoftware.DirectoryOpus,Microsoft.Office,Nvidia.GeForceExperience,Spotify.Spotify,Stardock.Fences,Valve.Steam,VideoLAN.VLC"
+$groupCode = "acaudwell.Gource,JackieLiu.NotepadsApp,Microsoft.VisualStudioCode,Notepad++.Notepad++,Obsidian.Obsidian"
+$groupEditing = "Audacity.Audacity,GIMP.GIMP,Meltytech.Shotcut,OBSProject.OBSStudio"
+$groupFiles = "7zip.7zip,RARLab.WinRAR,CodeSector.TeraCopy"
 $groupHardware = "Logitech.LGS,Olivia.VIA"
-$groupEntertainment = "Discord.Discord,Valve.Steam,EpicGames.EpicGamesLauncher,ElectronicArts.EADesktop,Blitz.Blitz,RiotGames.LeagueOfLegends.NA,FlawlessWidescreen.FlawlessWidescreen"
-$groupTools = "CPUID.HWMonitor,Lexikos.AutoHotkey,Microsoft.PowerToys,Stardock.Fences,PuTTY.PuTTY"
-$groupOptional = "Klocman.BulkCrapUninstaller,Qalculate.Qalculate,HakuNeko.HakuNeko,Tenpi.Waifu2xGUI,VentisMedia.MediaMonkey,Handbrake.Handbrake,flux.flux,Oracle.JavaRuntimeEnvironment,Google.Chrome,calibre.calibre,Sigil-Ebook.Sigil"
+$groupLaunchers = "BlueStack.BlueStacks,ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Ubisoft.Connect"
+$groupLeague = "RiotGames.LeagueOfLegends.NA,Blitz.Blitz"
+$groupMinecraft = "Mojang.MinecraftLauncher,PolyMC.PolyMC"
+$groupReading = "Calibre.Calibre,Sigil-Ebook.Sigil"
+$groupTools = "CPUID.HWMonitor,Lexikos.AutoHotkey,Microsoft.PowerToys,PuTTY.PuTTY"
+$groupTorrent = "PopcornTime.Popcorn-Time,qBittorrent.qBittorrent"
+$groupOptional = "Klocman.BulkCrapUninstaller,Qalculate.Qalculate,HakuNeko.HakuNeko,Tenpi.Waifu2xGUI,VentisMedia.MediaMonkey,Handbrake.Handbrake,flux.flux,Oracle.JavaRuntimeEnvironment,Google.Chrome,KristenMcWilliam.Nyrna,SomePythonThings.WingetUIStore,RustemMussabekov.Raindrop,FlawlessWidescreen.FlawlessWidescreen,"
 
-#Lists out installation options for user to select individual groups (Initial Version 1.1)
-Write-Host `n 1. Core: `n
-foreach ($app in $groupCore.split(',').trim()){Write-Host $app}
-Write-Host `n 2. AV: `n
-foreach ($app in $groupAV.split(',').trim()){Write-Host $app}
-Write-Host `n 3. Hardware: `n
-foreach ($app in $groupHardware.split(',').trim()){Write-Host $app}
-Write-Host `n 4. Entertainment: `n
-foreach ($app in $groupEntertainment.split(',').trim()){Write-Host $app}
-Write-Host `n 5. Tools: `n
-foreach ($app in $groupTools.split(',').trim()){Write-Host $app}
-Write-Host `n 6. Optional: `n
-foreach ($app in $groupOptional.split(',').trim()){Write-Host $app}
-"`n"
-
-#Prompt for user input
-$userInput = Read-Host "Select an option"
-
-#Variable formatting after user selection for script use
-if($userInput -eq '1')
+#Function initialization
+Function script:ViewGroup
     {
-        $groupSet = $groupCore
-    }
-elseif($userInput -eq '2')
-    {
-        $groupSet = $groupAV
-    }
-elseif($userInput -eq '3')
-    {
-        $groupSet = $groupHardware
-    }
-elseif($userInput -eq '4')
-    {
-        $groupSet = $groupEntertainment
-    }
-elseif($userInput -eq '5')
-    {
-        $groupSet = $groupTools
-    }
-elseif($userInput -eq '6')
-    {
-        $groupSet = $groupOptional
-    }
-else
-    {
-       $groupSet = $null 
+        Param($group)
+        foreach($app in $group.split(',').trim()){Write-Host $app}
+        Write-Host "`n"
     }
 
-#Begin installation of apps in selected group following user input
-foreach ($application in $groupSet.split(',').trim())
+Function script:ViewSelectedApps
     {
-        winget install $application -h
+        foreach($app in $secondarySelection.split(',').trim()){Write-Host $app}
+        Write-Host "`n"
     }
+
+Function script:StartInstall
+    {
+        Param($group)
+        foreach($app in $group.split(',').trim()){winget install $app -h}
+    }
+
+Function script:SelectPack
+    {
+        $script:primarySelection = Read-Host "`nPlease select an alternative pack (1-12)"
+        "`n"
+    }
+
+Function script:SetSecondaryPack
+    {
+        if($primarySelection -eq 1){$script:secondarySelection = $groupStart}
+            elseif($primarySelection -eq 2){$script:secondarySelection = $groupCode}
+            elseif($primarySelection -eq 3){$script:secondarySelection = $groupEditing}
+            elseif($primarySelection -eq 4){$script:secondarySelection = $groupFiles}
+            elseif($primarySelection -eq 5){$script:secondarySelection = $groupHardware}
+            elseif($primarySelection -eq 6){$script:secondarySelection = $groupLaunchers}
+            elseif($primarySelection -eq 7){$script:secondarySelection = $groupLeague}
+            elseif($primarySelection -eq 8){$script:secondarySelection = $groupMinecraft}
+            elseif($primarySelection -eq 9){$script:secondarySelection = $groupReading}
+            elseif($primarySelection -eq 10){$script:secondarySelection = $groupTools}
+            elseif($primarySelection -eq 11){$script:secondarySelection = $groupTorrent}
+            elseif($primarySelection -eq 12){$script:secondarySelection = $groupOptional}
+            else{}
+    }
+
+Function script:DisplaySelectedGroup
+    {
+        if($primarySelection -eq 1){"You selected the default pack:"}
+            elseif($primarySelection -eq 2){"You selected the Code pack:"}
+            elseif($primarySelection -eq 3){"You selected the Editing pack:"}
+            elseif($primarySelection -eq 4){"You selected the Files pack:"}
+            elseif($primarySelection -eq 5){"You selected the Hardware pack:"}
+            elseif($primarySelection -eq 6){"You selected the Launchers pack:"}
+            elseif($primarySelection -eq 7){"You selected the League pack:"}
+            elseif($primarySelection -eq 8){"You selected the Minecraft pack:"}
+            elseif($primarySelection -eq 9){"You selected the Reading pack:"}
+            elseif($primarySelection -eq 10){"You selected the Tools pack:"}
+            elseif($primarySelection -eq 11){"You selected the Torrent pack:"}
+            elseif($primarySelection -eq 12){"You selected the Optional pack:"}
+            else{}
+        "`n"
+    }
+
+#Begin execution of initial script
+Write-Host "`nWelcome to the Winget-powered setup script! `nWould you like to proceed with the default selection?`n"
+ViewGroup $groupStart
+$primaryStart = Read-Host "y/n"
+
+if($primaryStart -eq "y"){StartInstall $groupStart}
+    elseif($primaryStart -eq "n")
+        {
+            SelectPack
+            SetSecondaryPack
+            DisplaySelectedGroup
+            ViewSelectedApps
+        }
+
+Write-Host "`nWould you like to proceed with this selection?`n"
+$secondaryStart = Read-Host "y/n"
+
+While($secondaryStart -eq "n" -or "$null")
+    {
+        SelectPack
+        SetSecondaryPack
+        DisplaySelectedGroup
+        ViewSelectedApps
+        Write-Host "`nWould you like to proceed with this selection?`n"
+        $secondaryStart = Read-Host "y/n"
+    }
+
+if($secondaryStart -eq "y"){StartInstall $secondarySelection}
