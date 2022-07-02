@@ -14,7 +14,7 @@ $groupMinecraft = "Mojang.MinecraftLauncher,PolyMC.PolyMC"
 $groupReading = "Calibre.Calibre,Sigil-Ebook.Sigil"
 $groupTools = "CPUID.HWMonitor,Lexikos.AutoHotkey,Microsoft.PowerToys,PuTTY.PuTTY"
 $groupTorrent = "PopcornTime.Popcorn-Time,qBittorrent.qBittorrent"
-$groupOptional = "Klocman.BulkCrapUninstaller,Qalculate.Qalculate,HakuNeko.HakuNeko,Tenpi.Waifu2xGUI,VentisMedia.MediaMonkey,Handbrake.Handbrake,flux.flux,Oracle.JavaRuntimeEnvironment,Google.Chrome,KristenMcWilliam.Nyrna,SomePythonThings.WingetUIStore,RustemMussabekov.Raindrop,FlawlessWidescreen.FlawlessWidescreen,"
+$groupOptional = "FlorianHoech.DisplayCAL,Klocman.BulkCrapUninstaller,Qalculate.Qalculate,HakuNeko.HakuNeko,Tenpi.Waifu2xGUI,VentisMedia.MediaMonkey,Handbrake.Handbrake,flux.flux,Oracle.JavaRuntimeEnvironment,Google.Chrome,KristenMcWilliam.Nyrna,SomePythonThings.WingetUIStore,RustemMussabekov.Raindrop,FlawlessWidescreen.FlawlessWidescreen,"
 
 #Function initialization
 Function script:ViewGroup
