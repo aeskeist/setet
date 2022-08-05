@@ -1,0 +1,2 @@
+﻿$uninstallGroup = "AD2F1837.OMENCommandCenter_v10z8vjag6ke6,Disney.37853FC22B2CE_6rarf9sa4v8jt,Microsoft.GamingApp_8wekyb3d8bbwe,Microsoft.Getstarted_8wekyb3d8bbwe,Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe,Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe,Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe,Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe,Microsoft.YourPhone_8wekyb3d8bbwe"
+foreach($app in $uninstallGroup.split(',').trim()){winget uninstall $app -h}
