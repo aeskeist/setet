@@ -1,10 +1,10 @@
 $InstallGroup = @{
     Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA";
     Editing = "Microsoft.VisualStudioCode,Handbrake.Handbrake,KDE.Krita,KDE.KritaShellExtension";
-    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Ubisoft.Connect,Valve.Steam,PrismLauncher.PrismLauncher";
+    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher";
     League = "Blitz.Blitz,RiotGames.LeagueOfLegends.NA";
-    Tools = "Lexikos.AutoHotkey,Microsoft.PowerToys,PuTTY.PuTTY";
-    Optional = "FlawlessWidescreen.FlawlessWidescreen,FlorianHoech.DisplayCAL,flux.flux,HakuNeko.HakuNeko,Klocman.BulkCrapUninstaller,Stardock.Fences"
+    Tools = "REALiX.HWiNFO,Microsoft.PowerToys";
+    Optional = "FlawlessWidescreen.FlawlessWidescreen,FlorianHoech.DisplayCAL,flux.flux,HakuNeko.HakuNeko"
 }
 function DefaultInstall
     {
