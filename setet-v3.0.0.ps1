@@ -1,5 +1,5 @@
 $InstallGroup = @{
-    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA";
+    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,CentStudio.CentBrowser,Google.Chrome,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA";
     Editing = "Microsoft.VisualStudioCode,Handbrake.Handbrake,KDE.Krita,KDE.KritaShellExtension";
     Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher";
     League = "Blitz.Blitz,RiotGames.LeagueOfLegends.NA";
