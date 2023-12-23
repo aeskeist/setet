@@ -1,9 +1,9 @@
 $InstallGroup = @{
-    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,CentStudio.CentBrowser,Google.Chrome,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA";
+    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,CentStudio.CentBrowser,Google.Chrome,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA,SteelSeries.GG";
     Editing = "Microsoft.VisualStudioCode,Handbrake.Handbrake,KDE.Krita,KDE.KritaShellExtension";
-    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher";
-    League = "Blitz.Blitz,RiotGames.LeagueOfLegends.NA";
-    Tools = "REALiX.HWiNFO,Microsoft.PowerToys";
+    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher,NexusMods.Vortex";
+    League = "Blitz.Blitz,RiotGames.LeagueOfLegends.NA,RiotGames.Valorant.NA";
+    Tools = "REALiX.HWiNFO,Microsoft.PowerToys,Adobe.Acrobat.Reader.64-bit";
     Optional = "FlawlessWidescreen.FlawlessWidescreen,FlorianHoech.DisplayCAL,flux.flux,HakuNeko.HakuNeko"
 }
 function DefaultInstall
