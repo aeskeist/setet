@@ -1,10 +1,10 @@
 $InstallGroup = @{
-    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,CentStudio.CentBrowser,Google.Chrome,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA,SteelSeries.GG";
+    Default = "GPSoftware.DirectoryOpus,Nvidia.GeForceExperience,Microsoft.Office,Discord.Discord,CentStudio.CentBrowser,Google.Chrome,Spotify.Spotify,VideoLAN.VLC,Olivia.VIA,SteelSeries.GG,Apple.iTunes,Microsoft.Teams";
     Editing = "Microsoft.VisualStudioCode,Handbrake.Handbrake,KDE.Krita,KDE.KritaShellExtension";
-    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher,NexusMods.Vortex";
+    Launchers = "ElectronicArts.EADesktop,EpicGames.EpicGamesLauncher,Valve.Steam,PrismLauncher.PrismLauncher,NexusMods.Vortex,FACEITLTD.FACEITClient,CollapseLauncher.Collapse";
     League = "Blitz.Blitz,RiotGames.LeagueOfLegends.NA,RiotGames.Valorant.NA";
-    Tools = "REALiX.HWiNFO,Microsoft.PowerToys,Adobe.Acrobat.Reader.64-bit";
-    Optional = "FlawlessWidescreen.FlawlessWidescreen,FlorianHoech.DisplayCAL,flux.flux,HakuNeko.HakuNeko"
+    Tools = "Microsoft.PowerToys,Adobe.Acrobat.Reader.64-bit,AnyDeskSoftwareGmbH.AnyDesk,Microsoft.OpenJDK.17,JackDevey.Lux,REALiX.HWiNFO,ebkr.r2modman,Obsidian.Obsidian";
+    Optional = "FlawlessWidescreen.FlawlessWidescreen,FlorianHoech.DisplayCAL,flux.flux,HakuNeko.HakuNeko,CharlesMilette.TranslucentTB"
 }
 function DefaultInstall
     {
